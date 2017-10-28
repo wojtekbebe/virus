@@ -47,14 +47,79 @@ export default class InputParams extends Component {
                             <input type="range" value={defaultValue.R} id="resistant" className="form-control" onChange={this.onUpdate.bind(this, 'R')}/>
                         </div>
                     </div>
+                    <div className="col-md-4">
+                        <div className="form-group">
+                            <label htmlFor="infectious">Procent zarażonych</label>
+                            <span className="range-label">{defaultValue.I}</span>
+                            <input type="range" value={defaultValue.I} id="infectious" className="form-control" onChange={this.onUpdate.bind(this, 'I')}/>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="form-group">
+                            <label htmlFor="vaccinated">Procent zaszczepionych</label>
+                            <span className="range-label">{defaultValue.V}</span>
+                            <input type="range" value={defaultValue.V} id="vaccinated" className="form-control" onChange={this.onUpdate.bind(this, 'V')}/>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="form-group">
+                            <label htmlFor="susceptible">Procent podatnych</label>
+                            <span className="range-label">{defaultValue.S}</span>
+                            <input type="range" value={defaultValue.S} id="susceptible" className="form-control" onChange={this.onUpdate.bind(this, 'S')}/>
+                        </div>
+                    </div>
 
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="rate2">Współczynnik wyleczalnosci</label>
-                            <span className="range-label">{defaultValue.a}</span>
-                            <input type="range" min="0" max="1" step="0.1" value={defaultValue.a} id="rate2" className="form-control" onChange={this.onUpdate.bind('a',this)}/>
+                            <label htmlFor="daysCount">Czas</label>
+                            <span className="range-label">{defaultValue.daysCount}</span>
+                            <input type="range" value={defaultValue.daysCount} id="daysCount" className="form-control" onChange={this.onUpdate.bind(this, 'daysCount')}/>
                         </div>
                     </div>
+
+                    <div className="col-md-4">
+                        <div className="form-group">
+                            <label htmlFor="a">a</label>
+                            <span className="range-label">{defaultValue.a}</span>
+                            <input type="range" min="0" max="1" step="0.1" value={defaultValue.a} id="a" className="form-control" onChange={this.onUpdate.bind(this, 'a')}/>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="form-group">
+                            <label htmlFor="y1">y1</label>
+                            <span className="range-label">{defaultValue.y1}</span>
+                            <input type="range" min="0" max="1" step="0.1" value={defaultValue.y1} id="y1" className="form-control" onChange={this.onUpdate.bind(this, 'y1')}/>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="form-group">
+                            <label htmlFor="b1">b1</label>
+                            <span className="range-label">{defaultValue.b1}</span>
+                            <input type="range" min="0" max="1" step="0.1" value={defaultValue.b1} id="b1" className="form-control" onChange={this.onUpdate.bind(this, 'b1')}/>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="form-group">
+                            <label htmlFor="u">U</label>
+                            <span className="range-label">{defaultValue.u}</span>
+                            <input type="range" min="0" max="1" step="0.1" value={defaultValue.u} id="u" className="form-control" onChange={this.onUpdate.bind(this, 'u')}/>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="form-group">
+                            <label htmlFor="b">b</label>
+                            <span className="range-label">{defaultValue.b}</span>
+                            <input type="range" min="0" max="1" step="0.1" value={defaultValue.b} id="b" className="form-control" onChange={this.onUpdate.bind(this, 'b')}/>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="form-group">
+                            <label htmlFor="y">y</label>
+                            <span className="range-label">{defaultValue.y}</span>
+                            <input type="range" min="0" max="1" step="0.1" value={defaultValue.y} id="y" className="form-control" onChange={this.onUpdate.bind(this, 'y')}/>
+                        </div>
+                    </div>
+
                     <div className="col-md-4">
                         <button type="submit" className="btn btn-primary" onClick={this.onButtonClick.bind(this)}>Rozpocznij symulację</button>
                     </div>
