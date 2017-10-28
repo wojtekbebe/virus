@@ -10,13 +10,21 @@ export default class PredefinedInputData extends Component {
 
     render() {
         return (
-            <div className="col-md-12 add-bottom-line">
-                <button type="submit" className="btn btn-primary">5% niezaszczepionych</button>
-                <button type="submit" className="btn btn-primary">10% niezaszczepionych</button>
-                <button type="submit" className="btn btn-primary">20% niezaszczepionych</button>
-                <button type="submit" className="btn btn-primary">30% niezaszczepionych</button>
-                <button type="submit" className="btn btn-primary">40% niezaszczepionych</button>
-                <button type="submit" className="btn btn-primary">50% niezaszczepionych</button>
+            <div className="col-md-12 add-bottom-line text-center">
+                
+                <div className="form-check">
+                    <label className="form-check-label">
+                        <input type="radio" className="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1"/>
+                        OSPA: zaszczepieni 20%, niezaszczepieni 80%
+                    </label>
+                </div>
+                <div className="form-check">
+                    <label className="form-check-label">
+                        <input type="radio" className="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2"/>
+                        OSPA: zaszczepieni 70%, niezaszczepieni 30%
+                    </label>
+                </div>
+                <button type="submit" className="btn btn-primary" >Symuluj</button>
             </div>
         )
     }
