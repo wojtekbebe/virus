@@ -5,10 +5,10 @@ import Heatmap from 'react-heatmap';
 import LinearGraph from "./LinearGraph";
 import InputParams from './InputParams';
 
+import RandomHeatEngine from "./models/RandomHeatEngine";
 
 class Simulation extends Component {
     onParamsUpdate(inputParams) {
-        console.log('params: ', inputParams);
         this.setState(Object.assign(
             {},
             this.state,
@@ -16,11 +16,19 @@ class Simulation extends Component {
                 inputParams: Object.assign({}, this.state.inputParams, inputParams),
             }
             )
-        )
+        );
     }
 
     onStartButtonClicked() {
-        const engine = new LinearEngine(
+        const linearEngine = new LinearEngine(
+            this.state.inputParams.I,
+            this.state.inputParams.R,
+            this.state.inputParams.V,
+            this.state.inputParams.r,
+            this.state.inputParams.a,
+        );
+
+        const heatEngine = new RandomHeatEngine(
             this.state.inputParams.I,
             this.state.inputParams.R,
             this.state.inputParams.V,
@@ -29,11 +37,12 @@ class Simulation extends Component {
         );
 
         this.setState(Object.assign(
-            {},
-            this.state,
-            {
-                graphData: engine.getGraphData(),
-            }
+                {},
+                this.state,
+                {
+                    graphData: linearEngine.getGraphData(),
+                    heatData: heatEngine.getHeatData(+new Date),
+                }
             )
         );
     }
@@ -43,14 +52,22 @@ class Simulation extends Component {
 
         this.state = {
             graphData: [],
+
             inputParams: {
                 I: 10,
                 R: 10,
                 V: 10,
                 r: 0.3,
                 a: 0.4,
-            }
+            },
+            heatData: [],
         };
+
+        this.heatContainerStyle = {
+            width: "500px",
+            height: "500px",
+        }
+
     }
 
     render() {
