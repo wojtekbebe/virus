@@ -18,8 +18,11 @@ class Simulation extends Component {
         );
     }
 
-    onStartButtonClicked() {
+    componentDidMount() {
+        this.runSimulation();
+    }
 
+    runSimulation() {
         const linearEngine = new SVIRLinearEngine(this.state.inputParams);
 
         const heatEngine = new RandomHeatEngine(
@@ -76,7 +79,7 @@ class Simulation extends Component {
         return (
             <div className="col-md-6">
                 <InputParams inputParams={this.state.inputParams}
-                             onStartButtonClicked={this.onStartButtonClicked.bind(this)}
+                             onStartButtonClicked={this.runSimulation.bind(this)}
                              onParamsUpdate={this.onParamsUpdate.bind(this)}/>
                 <div className="col-md-12 left-box-lightblue">
                     <LinearGraph graphData={this.state.graphData}/>
