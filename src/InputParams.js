@@ -2,33 +2,39 @@ import React, { Component } from 'react';
 
 export default class InputParams extends Component {
 
+    constructor(...args) {
+        super(...args);
+
+        this.params = {
+
+        };
+    }
+
   onButtonClick() {
     this.props.onStartButtonClicked();
   }
 
   onUpdate() {
-    this.props.onParamsUpdate({
-        R: 5, // odporni, 0-100
-        I: 10, // zarazeni
-        r: 55, // zarazliwosci
-        a: 99,  // wsplicznik wyleczalnosci
-
-    })
+    this.props.onParamsUpdate(this.params);
   }
 
-  onChange1(R) {
-    this.onUpdate({ R: R });
+  onChange1(event) {
+    this.params.R = event.target.value;
+    this.onUpdate();
   }
 
   onChange2(I) {
-    this.onUpdate({ I: I });
+    this.params.I = I;
+    this.onUpdate();
   }
 
   onChange3(r) {
-    this.onUpdate({ r: r });
+    this.params.r = r;
+    this.onUpdate();
   }
 
   onChange4(a) {
+    this.params.a = a;
     this.onUpdate({ a: a });
   }
 
