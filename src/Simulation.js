@@ -87,6 +87,12 @@ class Simulation extends Component {
                 <div className="col-md-12 left-box-heatmap">
                     <Heatmap height={450} width={450} max={1} unit="pixels" data={this.state.heatData}/>
                 </div>
+                <div className="col-md-12 time-range">
+                    <div className="form-group">
+                        <span className="range-label">Czas</span>
+                        <input type="range" min="1" max="100" step="1" value="1" id="time" className="form-control"/>
+                    </div>
+                </div>
             </div>
         );
     }

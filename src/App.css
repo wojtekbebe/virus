@@ -73,7 +73,7 @@
     margin-top: 41px;
 }
 
-.set-border label{
+.set-border label {
     font-size: 12px;
 }
 
@@ -96,13 +96,18 @@ input[type=checkbox], input[type=radio] {
     margin-right: 10px;
 }
 
-.text-center button{
+.text-center button {
     margin-top: 10px;
 }
 
-.left-box-heatmap{
+.left-box-heatmap {
     margin-top: 40px;
     height: 500px;
     width: 550px;
     background-image: url("../public/14-map-poland-political.jpg");
+    margin-bottom: 30px;
+}
+
+.time-range .range-label {
+    font-size: 20px;
 }
