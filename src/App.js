@@ -27,6 +27,12 @@ class App extends Component {
 
         this.state = {
             graphData: [],
+            inputParams: {
+                R: 0.1,
+                I: 0.2,
+                r: 0.3,
+                a: 0.4,
+            }
         };
     }
 
@@ -40,7 +46,7 @@ class App extends Component {
 
         <LinearGraph graphData={this.state.graphData} />
 
-        <InputParams inputParams={this.inputParams} onStartButtonClicked={this.onStartButtonClicked.bind(this)} onParamsUpdate={this.onParamsUpdate.bind(this)} />
+        <InputParams inputParams={this.state.inputParams} onStartButtonClicked={this.onStartButtonClicked.bind(this)} onParamsUpdate={this.onParamsUpdate.bind(this)} />
       </div>
     );
   }
