@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {LineChart, Line, XAxis, YAxis} from 'recharts';
+import {LineChart, Legend, Line, XAxis, YAxis} from 'recharts';
 
 export default class LinearGraph extends Component {
 
@@ -21,9 +21,10 @@ export default class LinearGraph extends Component {
                     height={250}
                     data={this.props.graphData}
                 >
-                    <Line type="monotone" dataKey="S" stroke="#00FF00"/>
-                    <Line type="monotone" dataKey="I" stroke="#FF0000"/>
-                    <Line type="monotone" dataKey="R" stroke="#0000FF"/>
+                    <Legend/>
+                    <Line type="monotone" dataKey="S" name="podatni" stroke="#00FF00"/>
+                    <Line type="monotone" dataKey="I" name="zakażeni" stroke="#FF0000"/>
+                    <Line type="monotone" dataKey="R" name="odporni" stroke="#0000FF"/>
                     <XAxis dataKey="t"/>
                     <YAxis/>
                 </LineChart>
