@@ -83,3 +83,11 @@ label {
 .btn {
     font-size: 12px;
 }
+
+input[type=checkbox], input[type=radio] {
+    margin-right: 10px;
+}
+
+.text-center button{
+    margin-top: 10px;
+}
