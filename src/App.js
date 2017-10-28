@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import InputParams from './InputParams';
 import './App.css';
-import { LinearEngine } from "./models/LinearEngine";
+import LinearEngine from "./models/LinearEngine";
 import LinearGraph from "./LinearGraph";
 
 class App extends Component {
@@ -10,10 +10,12 @@ class App extends Component {
     }
 
     onStartButtonClicked() {
-        const engine = new LinearEngine();
-        engine.setParams(this.data.inputParams);
+        const engine = new LinearEngine(0.1, 0.1);
+
 
         this.graphData = engine.getGraphData();
+
+        console.log(this.graphData);
     }
 
     constructor(...args) {
