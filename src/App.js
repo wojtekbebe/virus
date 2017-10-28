@@ -10,7 +10,7 @@ class App extends Component {
     }
 
     onStartButtonClicked() {
-        const engine = new LinearEngine(0.1, 0.1);
+        const engine = new LinearEngine(10, 10);
 
         this.setState(Object.assign(
                 {},
@@ -37,7 +37,6 @@ class App extends Component {
         <div className="App-header">
           <h2>Welcome to Virus</h2>
         </div>
-
 
         <LinearGraph graphData={this.state.graphData} />
 
