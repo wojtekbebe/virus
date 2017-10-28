@@ -7,19 +7,13 @@ export default class LinearEngine {
         this.resistant = resistant / 100;
         this.susceptible = (100 - infectious - resistant) / 100;
 
-        this.step = 0.05;
-        this.stepsCount = 49;
+        this.dayCount = 150;
 
         this.r = 0.3; // wspolczynnik zakaznosci
         this.a = 0.1; // wspolczynnik ozdrowien
     }
 
-    setParams(params) {
-        this.step = params.step || this.step;
-    }
-
     getGraphData() {
-        let t = 0.0;
         const result = [];
 
         let S = this.susceptible;
@@ -30,7 +24,7 @@ export default class LinearEngine {
 
         result.push({t, S, I, R});
 
-        for (var i = 0; i < this.stepsCount; ++i) {
+        for (var t = 0; t < this.dayCount; ++t) {
             deltaS = -this.r * S * I;
             deltaI = this.r * S * I - this.a * I;
             deltaR = this.a * I;
@@ -40,8 +34,6 @@ export default class LinearEngine {
             R += deltaR;
 
             result.push({t, S, I, R});
-
-            t += this.step;
         }
 
         return result;
