@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import InputParams from './InputParams';
-import PredefinedInputData from './PredefinedInputData';
 import './App.css';
 import LinearEngine from "./models/LinearEngine";
-import LinearGraph from "./LinearGraph";
 import Heatmap from 'react-heatmap';
+import LinearGraph from "./LinearGraph";
+import InputParams from './InputParams';
+
 
 class Simulation extends Component {
     onParamsUpdate(inputParams) {
@@ -55,30 +55,15 @@ class Simulation extends Component {
 
     render() {
         return (
-            <div className="container container-main">
-                <div className="row">
-                    <PredefinedInputData/>
+            <div className="col-md-6">
+                <InputParams inputParams={this.state.inputParams}
+                             onStartButtonClicked={this.onStartButtonClicked.bind(this)}
+                             onParamsUpdate={this.onParamsUpdate.bind(this)}/>
+                <div className="col-md-12 left-box-lightblue">
+                    <LinearGraph graphData={this.state.graphData}/>
                 </div>
-                <div className="row">
-                    <div className="col-md-6">
-                        <InputParams inputParams={this.state.inputParams}
-                                     onStartButtonClicked={this.onStartButtonClicked.bind(this)}
-                                     onParamsUpdate={this.onParamsUpdate.bind(this)}/>
-                        <div className="col-md-12 left-box-lightblue">
-                            <LinearGraph graphData={this.state.graphData}/>
-                        </div>
-                        <div className="col-md-12 left-box-lightcoral">
-                            <Heatmap/>
-                        </div>
-                    </div>
-                    <div className="col-md-6">
-                        <InputParams inputParams={this.state.inputParams}
-                                     onStartButtonClicked={this.onStartButtonClicked.bind(this)}
-                                     onParamsUpdate={this.onParamsUpdate.bind(this)}/>
-                        <div className="col-md-12 left-box-lightblue">
-                            <LinearGraph graphData={this.state.graphData}/>
-                        </div>
-                    </div>
+                <div className="col-md-12 left-box-lightcoral">
+                    <Heatmap/>
                 </div>
             </div>
         );
