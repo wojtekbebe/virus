@@ -26,29 +26,32 @@ class Simulation extends Component {
     runSimulation() {
         const linearEngine = new SVIRLinearEngine(this.state.inputParams);
 
-        const heatEngine = new RandomHeatEngine(
-            this.state.inputParams.I,
-            this.state.inputParams.R,
-            this.state.inputParams.V,
-            this.state.inputParams.r,
-            this.state.inputParams.a,
-        );
+        const heatEngine = new RandomHeatEngine(this.state.inputParams);
 
         this.setState(Object.assign(
                 {},
                 this.state,
                 {
                     graphData: linearEngine.getGraphData(),
-                    heatData: heatEngine.getHeatData(+new Date),
+                    heatData: heatEngine.getHeatData(this.state.time),
                 }
             )
         );
+    }
+
+    onTimeChange(event) {
+        this.setState(Object.assign({}, this.state, {
+            time: event.target.value,
+        }));
+
+        setTimeout(() => this.runSimulation(), 200); // TODO: change to .throttle
     }
 
     constructor(...args) {
         super(...args);
 
         this.state = {
+            time: 0,
             graphData: [],
 
             inputParams: {
@@ -90,7 +93,7 @@ class Simulation extends Component {
                 <div className="col-md-12 time-range">
                     <div className="form-group">
                         <span className="range-label">Czas</span>
-                        <input type="range" min="1" max="100" step="1" value="1" id="time" className="form-control"/>
+                        <input type="range" min="1" max="100" step="1" value={this.state.time} id="time" onChange={this.onTimeChange.bind(this)} className="form-control"/>
                     </div>
                 </div>
             </div>

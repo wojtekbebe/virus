@@ -32,7 +32,7 @@ export default class SVIRLinearEngine {
 
         result.push({t: 0, S, I, R, V});
 
-        for (var t = 0; t < this.daysCount; ++t) {
+        for (var t = 1; t < this.daysCount; ++t) {
             deltaS = u - u*S - b*S*I - a*S;
             deltaV = a*S - b1*V*I - y1*V - u*V;
             deltaI = b*S*I + b1*V*I - y*I - u*I;

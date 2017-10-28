@@ -1,4 +1,4 @@
-import LinearEngine from './LinearEngine';
+import SVIRLinearEngine from "./SVIRLinearEngine";
 
 const WIDTH = 470;
 const HEIGHT = 460;
@@ -7,32 +7,37 @@ export default class RandomHeatEngine {
     // infectious - procent zarazonych
     // resistant - procent odpornych (zaszczepionych)
     // susceptible - podatni
-    constructor(infectious, resistant, vaccinated, r, a) {
-        this.linearEngine = new LinearEngine(infectious, resistant, vaccinated, r, a);
+    constructor(params) {
+        this.linearEngine = new SVIRLinearEngine(params)
 
-        this.infectious = infectious / 100;
-        this.resistant = resistant / 100;
-        this.susceptible = (100 - infectious - resistant - vaccinated) / 100;
-
-        this.dayCount = 20;
-
-        this.r = r; // wspolczynnik zakaznosci
-        this.a = a; // wspolczynnik ozdrowien
+        this.data = this.linearEngine.getGraphData();
     }
 
 
     getHeatData(t) {
-        let result = [];
-        for (var x = 50; x <= WIDTH; x += 30) {
-            for (var y = 50; y <= HEIGHT; y += 30) {
-                result.push({
-                    x,
-                    y,
-                    value: Math.random(),
-                });
+        try {
+            const I = this.data[t].I;
+
+            let result = [];
+            for (var x = 50; x <= WIDTH; x += 30) {
+                for (var y = 50; y <= HEIGHT; y += 30) {
+                    result.push({
+                        x,
+                        y,
+                        value: I*Math.random(),
+                    });
+                }
             }
+
+            return result;
+        }
+        catch(e) {
+
         }
 
-        return result;
+        console.log('empty result');
+        return [];
+
+
     }
 }
