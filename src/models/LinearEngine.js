@@ -1,5 +1,13 @@
-class LinearEngine {
+export default class LinearEngine {
+    constructor() {
 
+    }
+
+    setParams() {
+
+    }
+
+    getGraphData() {
+
+    }
 }
-
-export class LinearEngine;
