@@ -34,6 +34,7 @@
 }
 
 .left-box-lightblue, .left-box-lightcoral, .left-box-lightseagreen {
+    height: 270px;
     min-height: 270px;
     margin-top: 20px;
     padding-top: 10px;
@@ -89,4 +90,12 @@ label {
 
 .btn {
     font-size: 12px;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin-right: 10px;
+}
+
+.text-center button{
+    margin-top: 10px;
 }
