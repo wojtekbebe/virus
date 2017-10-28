@@ -5,8 +5,16 @@ import LinearEngine from "./models/LinearEngine";
 import LinearGraph from "./LinearGraph";
 
 class App extends Component {
-    onParamsUpdate(params) {
-        console.log('params: ', params);
+    onParamsUpdate(inputParams) {
+        console.log('params: ', inputParams);
+        this.setState(Object.assign(
+                {},
+                this.state,
+                {
+                    inputParams,
+                }
+            )
+        )
     }
 
     onStartButtonClicked() {
