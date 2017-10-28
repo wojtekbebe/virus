@@ -4,6 +4,7 @@ import './App.css';
 import LinearEngine from "./models/LinearEngine";
 import LinearGraph from "./LinearGraph";
 
+
 class App extends Component {
     onParamsUpdate(inputParams) {
         console.log('params: ', inputParams);
@@ -47,14 +48,14 @@ class App extends Component {
 
     render() {
         return (
-            <div class="container container-main">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="col-md-12 left-box-lightblue">
+            <div className="container container-main">
+                <div className="row">
+                    <div className="col-md-7">
+                        <div className="col-md-12 left-box-lightblue">
                             <LinearGraph graphData={this.state.graphData}/>
                         </div>
-                        <div class="col-md-12 left-box-lightcoral"></div>
-                        <div class="col-md-12 left-box-lightseagreen"></div>
+                        <div className="col-md-12 left-box-lightcoral"></div>
+                        <div className="col-md-12 left-box-lightseagreen"></div>
                     </div>
                     <InputParams inputParams={this.inputParams}
                                  onStartButtonClicked={this.onStartButtonClicked.bind(this)}

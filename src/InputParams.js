@@ -38,9 +38,9 @@ export default class InputParams extends Component {
 
 
     render() {
-        const deafultValue = this.props.inputParams;
+        const deafultValue = this.props.inputParams || {};
         return (
-            <div class="col-md-4 col-md-offset-1">
+            <div className="col-md-4 col-md-offset-1">
                 <form>
                     <div className="form-group">
                         <label for="resistant">Procent odpornych</label>
@@ -58,7 +58,7 @@ export default class InputParams extends Component {
                         <label for="rate2">Współczynnik wyleczalnosci</label>
                         <input value={deafultValue.a} id="rate2" className="form-control" onChange={this.curabilityRateValue.bind(this)}/>
                     </div>
-                    <button type="submit" class="btn btn-primary" onClick={this.onButtonClick.bind(this)}>Rozpocznij symulację</button>
+                    <button type="submit" className="btn btn-primary" onClick={this.onButtonClick.bind(this)}>Rozpocznij symulację</button>
                 </form>
             </div>
         )
