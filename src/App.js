@@ -3,7 +3,7 @@ import InputParams from './InputParams';
 import './App.css';
 import LinearEngine from "./models/LinearEngine";
 import LinearGraph from "./LinearGraph";
-
+import Heatmap from 'react-heatmap';
 
 class App extends Component {
     onParamsUpdate(inputParams) {
@@ -59,7 +59,9 @@ class App extends Component {
                         <div className="col-md-12 left-box-lightblue">
                             <LinearGraph graphData={this.state.graphData}/>
                         </div>
-                        <div className="col-md-12 left-box-lightcoral"></div>
+                        <div className="col-md-12 left-box-lightcoral">
+                            <Heatmap/>
+                        </div>
                         <div className="col-md-12 left-box-lightseagreen"></div>
                     </div>
                     <InputParams inputParams={this.state.inputParams}
