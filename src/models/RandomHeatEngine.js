@@ -1,7 +1,7 @@
 import LinearEngine from './LinearEngine';
 
-const WIDTH = 600;
-const HEIGHT = 200;
+const WIDTH = 470;
+const HEIGHT = 460;
 
 export default class RandomHeatEngine {
     // infectious - procent zarazonych
@@ -23,8 +23,8 @@ export default class RandomHeatEngine {
 
     getHeatData(t) {
         let result = [];
-        for (var x = 0; x <= WIDTH; x += 30) {
-            for (var y = 0; y <= HEIGHT; y += 30) {
+        for (var x = 50; x <= WIDTH; x += 30) {
+            for (var y = 50; y <= HEIGHT; y += 30) {
                 result.push({
                     x,
                     y,
