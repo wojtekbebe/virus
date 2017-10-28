@@ -42,19 +42,19 @@ export default class InputParams extends Component {
         return (
             <div className="col-md-4 col-md-offset-1">
                 <div className="form-group">
-                    <label for="resistant">Procent odpornych</label>
+                    <label htmlFor="resistant">Procent odpornych</label>
                     <input value={deafultValue.R} id="resistant" className="form-control" onChange={this.resistantValue.bind(this)}/>
                 </div>
                 <div className="form-group">
-                    <label for="infectious">Procent zarażonych</label>
+                    <label htmlFor="infectious">Procent zarażonych</label>
                     <input value={deafultValue.I} id="infectious" className="form-control" onChange={this.infectiousValue.bind(this)}/>
                 </div>
                 <div className="form-group">
-                    <label for="rate1">Współczynnik zaraźliwości</label>
+                    <label htmlFor="rate1">Współczynnik zaraźliwości</label>
                     <input value={deafultValue.r} id="rate1" className="form-control" onChange={this.infectiousRateValue.bind(this)}/>
                 </div>
                 <div className="form-group">
-                    <label for="rate2">Współczynnik wyleczalnosci</label>
+                    <label htmlFor="rate2">Współczynnik wyleczalnosci</label>
                     <input value={deafultValue.a} id="rate2" className="form-control" onChange={this.curabilityRateValue.bind(this)}/>
                 </div>
                 <button type="submit" className="btn btn-primary" onClick={this.onButtonClick.bind(this)}>Rozpocznij symulację</button>
