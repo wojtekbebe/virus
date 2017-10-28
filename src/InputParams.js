@@ -20,25 +20,37 @@ export default class InputParams extends Component {
     this.onUpdate({ R: R });
   }
 
+  onChange2(I) {
+    this.onUpdate({ I: I });
+  }
+
+  onChange3(r) {
+    this.onUpdate({ r: r });
+  }
+
+  onChange4(a) {
+    this.onUpdate({ a: a });
+  }
+
 
   render() {
     return (
       <div className="inputparams">
         <div className="form-group">
-          <label for="infected">Procent zarażonych</label>
-          <input id="infected" className="form-control" onChange={this.onChange1.bind(this)} />
+          <label for="resistant">Procent odpornych</label>
+          <input id="resistant" className="form-control" onChange={this.onChange1.bind(this)} />
         </div>
         <div className="form-group">
-          <label for="immune">Procent odpornych</label>
-          <input id="immune" className="form-control" onChange={this.onChange1.bind(this)} />
+          <label for="infectious">Procent zarażonych</label>
+          <input id="infectious" className="form-control" onChange={this.onChange2.bind(this)} />
         </div>
         <div className="form-group">
-          <label for="ratio1">Współczynnik zaraźliwości</label>
-          <input id="ratio1" className="form-control" onChange={this.onChange1.bind(this)} />
+          <label for="rate1">Współczynnik zaraźliwości</label>
+          <input id="rate1" className="form-control" onChange={this.onChange3.bind(this)} />
         </div>
         <div className="form-group">
-          <label for="ratio2">Współczynnik wyleczalnosci</label>
-          <input id="ratio2" className="form-control" onChange={this.onChange1.bind(this)} />
+          <label for="rate2">Współczynnik wyleczalnosci</label>
+          <input id="rate2" className="form-control" onChange={this.onChange4.bind(this)} />
         </div>
         <button onClick={this.onButtonClick.bind(this)}>Rozpocznij symulację</button>
       </div>
