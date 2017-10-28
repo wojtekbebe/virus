@@ -10,7 +10,7 @@ export default class LinearEngine {
         this.step = 0.05;
         this.stepsCount = 49;
 
-        this.r = 0.1; // wspolczynnik zakaznosci
+        this.r = 0.3; // wspolczynnik zakaznosci
         this.a = 0.1; // wspolczynnik ozdrowien
     }
 
