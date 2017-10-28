@@ -57,7 +57,7 @@ class App extends Component {
                         <div className="col-md-12 left-box-lightcoral"></div>
                         <div className="col-md-12 left-box-lightseagreen"></div>
                     </div>
-                    <InputParams inputParams={this.inputParams}
+                    <InputParams inputParams={this.state.inputParams}
                                  onStartButtonClicked={this.onStartButtonClicked.bind(this)}
                                  onParamsUpdate={this.onParamsUpdate.bind(this)}/>
                 </div>
