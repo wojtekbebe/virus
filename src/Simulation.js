@@ -48,11 +48,19 @@ class Simulation extends Component {
             graphData: [],
 
             inputParams: {
-                I: 10,
-                R: 10,
-                V: 10,
-                r: 0.3,
-                a: 0.4,
+                infectious: 0.05, //infectious / 100,
+                resistant: 0.05, //resistant / 100,
+                vaccinated: 0.05, //vaccinated,
+                susceptible: 0.85, //(100 - infectious - resistant) / 100,
+
+                daysCount: 20,
+
+                a: 0.1,   // jaka cześć ludzi jest z każdym krokiem przenoszona do procesu szczepienia
+                y1: 0.5,  // jaka część ludzi zaszczepionych w każdym kroku przenoszona jest do odpornych (bez różnicy czy naturalnie czy nie)
+                b1: 0.2,  // jaka częsć ludzi zaszczepionych w kaðym kroku wciąż będzie zarażana ( powinno być w oczywsity sposób o rząd wielkości mniejsze od b)
+                u: 0.0    ,   // śmiertelność / dzietność w każdym kroku
+                b: 0.9,   // jaka część podatnych ludzi zostanie zarażona w każdym kroku
+                y: 0.15,   // jaka część ludzi chorych w każdym kroku przenoszona jest do ludzi zdrowych i odpornych
             },
             heatData: [],
         };
