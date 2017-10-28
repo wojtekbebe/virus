@@ -25,6 +25,7 @@ export default class LinearGraph extends Component {
                     <Line type="monotone" dataKey="S" name="podatni" stroke="#00FF00"/>
                     <Line type="monotone" dataKey="I" name="zakażeni" stroke="#FF0000"/>
                     <Line type="monotone" dataKey="R" name="odporni" stroke="#0000FF"/>
+                    <Line type="monotone" dataKey="V" stroke="#222222"/>
                     <XAxis dataKey="t"/>
                     <YAxis/>
                 </LineChart>

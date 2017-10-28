@@ -22,6 +22,7 @@ class App extends Component {
         const engine = new LinearEngine(
             this.state.inputParams.I,
             this.state.inputParams.R,
+            this.state.inputParams.V,
             this.state.inputParams.r,
             this.state.inputParams.a,
         );
@@ -44,6 +45,7 @@ class App extends Component {
             inputParams: {
                 I: 10,
                 R: 10,
+                V: 10,
                 r: 0.3,
                 a: 0.4,
             }

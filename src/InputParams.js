@@ -26,6 +26,11 @@ export default class InputParams extends Component {
         this.onUpdate();
     }
 
+    vaccinatedValue(event) { //Procent szczepionych
+        this.params.V = event.target.value;
+        this.onUpdate();
+    }
+
     infectiousRateValue(event) { //Współczynnik zaraźliwości
         this.params.r = event.target.value;
         this.onUpdate();
@@ -48,6 +53,10 @@ export default class InputParams extends Component {
                 <div className="form-group">
                     <label htmlFor="infectious">Procent zarażonych</label>
                     <input value={deafultValue.I} id="infectious" className="form-control" onChange={this.infectiousValue.bind(this)}/>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="infectious">Procent zaszczepionych</label>
+                    <input value={deafultValue.V} id="infectious" className="form-control" onChange={this.vaccinatedValue.bind(this)}/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="rate1">Współczynnik zaraźliwości</label>
