@@ -20,13 +20,7 @@ class Simulation extends Component {
 
     onStartButtonClicked() {
 
-        const linearEngine = new SVIRLinearEngine(
-            this.state.inputParams.I,
-            this.state.inputParams.R,
-            this.state.inputParams.V,
-            this.state.inputParams.r,
-            this.state.inputParams.a,
-        );
+        const linearEngine = new SVIRLinearEngine(this.state.inputParams);
 
         const heatEngine = new RandomHeatEngine(
             this.state.inputParams.I,

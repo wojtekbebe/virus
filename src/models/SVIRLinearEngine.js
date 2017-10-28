@@ -2,13 +2,13 @@ export default class SVIRLinearEngine {
     // infectious - procent zarazonych
     // resistant - procent odpornych (zaszczepionych)
     // susceptible - podatni
-    constructor(infectious, resistant, vaccinated, r, a) {
+    constructor(params) {
         this.infectious = 0.05; //infectious / 100;
         this.resistant = 0.05; //resistant / 100;
         this.vaccinated = 0.05; //vaccinated;
         this.susceptible = 0.85; //(100 - infectious - resistant) / 100;
 
-        this.dayCount = 20;
+        this.daysCount = 20;
 
         this.a = 0.0;   // jaka cześć ludzi jest z każdym krokiem przenoszona do procesu szczepienia
         this.y1 = 0.5;  // jaka część ludzi zaszczepionych w każdym kroku przenoszona jest do odpornych (bez różnicy czy naturalnie czy nie)
