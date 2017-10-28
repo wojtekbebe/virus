@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import InputParams from './InputParams';
 import './App.css';
 import LinearEngine from "./models/LinearEngine";
@@ -21,11 +21,11 @@ class App extends Component {
         const engine = new LinearEngine(10, 10);
 
         this.setState(Object.assign(
-                {},
-                this.state,
-                {
-                    graphData: engine.getGraphData(),
-                }
+            {},
+            this.state,
+            {
+                graphData: engine.getGraphData(),
+            }
             )
         );
     }
@@ -45,19 +45,24 @@ class App extends Component {
     }
 
 
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Welcome to Virus</h2>
-        </div>
-
-        <LinearGraph graphData={this.state.graphData} />
-
-        <InputParams inputParams={this.state.inputParams} onStartButtonClicked={this.onStartButtonClicked.bind(this)} onParamsUpdate={this.onParamsUpdate.bind(this)} />
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div class="container container-main">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="col-md-12 left-box-lightblue">
+                            <LinearGraph graphData={this.state.graphData}/>
+                        </div>
+                        <div class="col-md-12 left-box-lightcoral"></div>
+                        <div class="col-md-12 left-box-lightseagreen"></div>
+                    </div>
+                    <InputParams inputParams={this.inputParams}
+                                 onStartButtonClicked={this.onStartButtonClicked.bind(this)}
+                                 onParamsUpdate={this.onParamsUpdate.bind(this)}/>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;
