@@ -18,7 +18,7 @@ export default class LinearGraph extends Component {
             <div className="lineargraph" style={this.style}>
                 <LineChart
                     width={500}
-                    height={250}
+                    height={450}
                     data={this.props.graphData}
                 >
                     <Legend/>

@@ -34,8 +34,8 @@
 }
 
 .left-box-lightblue, .left-box-lightcoral, .left-box-lightseagreen {
-    height: 270px;
-    min-height: 270px;
+    height: 500px;
+    min-height: 500px;
     margin-top: 20px;
     padding-top: 10px;
 }
@@ -98,4 +98,11 @@ input[type=checkbox], input[type=radio] {
 
 .text-center button{
     margin-top: 10px;
+}
+
+.left-box-heatmap{
+    margin-top: 40px;
+    height: 500px;
+    width: 550px;
+    background-image: url("../public/14-map-poland-political.jpg");
 }

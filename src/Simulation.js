@@ -79,7 +79,7 @@ class Simulation extends Component {
                 <div className="col-md-12 left-box-lightblue">
                     <LinearGraph graphData={this.state.graphData}/>
                 </div>
-                <div className="col-md-12 left-box-lightcoral">
+                <div className="col-md-12 left-box-heatmap">
                     <Heatmap height={200} width={300} max={1} unit="pixels" data={this.state.heatData}/>
                 </div>
             </div>
