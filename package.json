@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^16.0.0",
+    "react-bootstrap": "^0.31.5",
     "react-d3-basic": "^1.6.11",
     "react-dom": "^16.0.0",
     "react-scripts": "0.9.5",
