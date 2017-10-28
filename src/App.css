@@ -75,3 +75,11 @@
 .set-border label{
     font-size: 12px;
 }
+
+label {
+    font-size: 12px;
+}
+
+.btn {
+    font-size: 12px;
+}
