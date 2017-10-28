@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
-import LinearEngine from "./models/LinearEngine";
+import SVIRLinearEngine from "./models/SVIRLinearEngine";
 import Heatmap from 'react-heatmap';
 import LinearGraph from "./LinearGraph";
 import InputParams from './InputParams';
-
 import RandomHeatEngine from "./models/RandomHeatEngine";
 
 class Simulation extends Component {
@@ -20,7 +19,8 @@ class Simulation extends Component {
     }
 
     onStartButtonClicked() {
-        const linearEngine = new LinearEngine(
+
+        const linearEngine = new SVIRLinearEngine(
             this.state.inputParams.I,
             this.state.inputParams.R,
             this.state.inputParams.V,
