@@ -8,10 +8,6 @@ export default class InputParams extends Component {
         this.params = {};
     }
 
-    onButtonClick() {
-        this.props.onStartButtonClicked();
-    }
-
     onUpdate(field, event) {
         this.params[field] = event.target.value;
         this.props.onParamsUpdate(this.params);
@@ -19,6 +15,8 @@ export default class InputParams extends Component {
 
     render() {
         const defaultValue = this.props.inputParams || {};
+        console.log("REDNER, props input y", this.props.inputParams.y);
+        console.log("REDNER, params state input y", this.params.y);
         /*
         // pierwsze cztery do 100
         this.infectious = 0.05; //infectious / 100;
@@ -120,9 +118,6 @@ export default class InputParams extends Component {
                         </div>
                     </div>
 
-                    <div className="col-md-4">
-                        <button type="submit" className="btn btn-primary" onClick={this.onButtonClick.bind(this)}>Rozpocznij symulację</button>
-                    </div>
                 </div>
             </div>
         )

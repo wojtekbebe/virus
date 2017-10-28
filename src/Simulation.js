@@ -13,9 +13,10 @@ class Simulation extends Component {
             this.state,
             {
                 inputParams: Object.assign({}, this.state.inputParams, inputParams),
-            }
-            )
+            })
         );
+
+        setTimeout(() => this.runSimulation(), 200); // TODO: change to .throttle
     }
 
     componentDidMount() {
@@ -79,7 +80,6 @@ class Simulation extends Component {
         return (
             <div className="col-md-6">
                 <InputParams inputParams={this.state.inputParams}
-                             onStartButtonClicked={this.runSimulation.bind(this)}
                              onParamsUpdate={this.onParamsUpdate.bind(this)}/>
                 <div className="col-md-12 left-box-lightblue">
                     <LinearGraph graphData={this.state.graphData}/>

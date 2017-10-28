@@ -33,7 +33,6 @@ export default class RandomHeatEngine {
             }
         }
 
-        console.log(result);
         return result;
     }
 }
