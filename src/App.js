@@ -12,7 +12,7 @@ class App extends Component {
                 {},
                 this.state,
                 {
-                    inputParams,
+                    inputParams: Object.assign({}, this.state.inputParams, inputParams),
                 }
             )
         )
