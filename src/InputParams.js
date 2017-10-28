@@ -52,7 +52,7 @@ export default class InputParams extends Component {
                         <div className="form-group">
                             <label htmlFor="rate2">Współczynnik wyleczalnosci</label>
                             <span className="range-label">{defaultValue.a}</span>
-                            <input type="range" min="0" max="1" step="0.1" value={defaultValue.a} id="rate2" className="form-control" onChange={this.curabilityRateValue.bind(this)}/>
+                            <input type="range" min="0" max="1" step="0.1" value={defaultValue.a} id="rate2" className="form-control" onChange={this.onUpdate.bind('a',this)}/>
                         </div>
                     </div>
                     <div className="col-md-4">
