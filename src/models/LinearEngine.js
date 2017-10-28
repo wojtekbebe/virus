@@ -28,7 +28,7 @@ export default class LinearEngine {
 
         let deltaS, deltaI, deltaR;
 
-        result.push({ t, S, I, R });
+        result.push({t, S, I, R});
 
         for (var i = 0; i < this.stepsCount; ++i) {
             deltaS = -this.r * S * I;
@@ -39,7 +39,7 @@ export default class LinearEngine {
             I += deltaI;
             R += deltaR;
 
-            result.push({ t, S, I, R });
+            result.push({t, S, I, R});
 
             t += this.step;
         }
