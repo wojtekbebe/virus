@@ -4,7 +4,7 @@ export default class InputParams extends Component {
 
   onUpdate() {
     this.props.onParamsUpdate({
-        initialPopulation: 5,
+        initialPopulation: 5, // TODO: read from inputs
         //... rest of parameters which we need to settle on
     })
   }
@@ -16,7 +16,7 @@ export default class InputParams extends Component {
   render() {
     return (
       <div className="inputparams">
-        <input onchange={this.onChange.bind(this)} />
+        <input onChange={this.onChange.bind(this)} />
       </div>
     )
   }

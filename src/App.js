@@ -3,18 +3,29 @@ import InputParams from './InputParams';
 import './App.css';
 
 class App extends Component {
-    onParamsUpdate(params) {
-        console.log('params updated: ', params);
+    onParamsUpdate(initialParams) {
+        this.data.inputParams = initialParams;
     }
+
+    constructor() {
+        this.data = {
+            inputParams: {
+                // TODO: inital params
+            }
+        }
+    }
+
 
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Welcome to React</h2>
+          <h2>Welcome to Virus</h2>
         </div>
 
-          <InputParams onParamsUpdate={this.onParamsUpdate.bind(this)} />
+
+
+        <InputParams inputParams={this.data.inputParams} onParamsUpdate={this.onParamsUpdate.bind(this)} />
       </div>
     );
   }
