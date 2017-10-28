@@ -5,8 +5,8 @@ export default class LinearEngine {
     constructor(infectious, resistant, vaccinated, r, a) {
         this.infectious = infectious / 100;
         this.resistant = resistant / 100;
-        this.vaccinated = vaccinated / 100;
-        this.susceptible = (100 - infectious - resistant - vaccinated) / 100;
+        this.vaccinated = 0;
+        this.susceptible = (100 - infectious - resistant) / 100;
 
         this.dayCount = 20;
 
