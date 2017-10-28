@@ -1,19 +1,20 @@
 import React, {Component} from 'react';
 import InputParams from './InputParams';
+import PredefinedInputData from './PredefinedInputData';
 import './App.css';
 import LinearEngine from "./models/LinearEngine";
 import LinearGraph from "./LinearGraph";
 import Heatmap from 'react-heatmap';
 
-class App extends Component {
+class Simulation extends Component {
     onParamsUpdate(inputParams) {
         console.log('params: ', inputParams);
         this.setState(Object.assign(
-                {},
-                this.state,
-                {
-                    inputParams: Object.assign({}, this.state.inputParams, inputParams),
-                }
+            {},
+            this.state,
+            {
+                inputParams: Object.assign({}, this.state.inputParams, inputParams),
+            }
             )
         )
     }
@@ -52,27 +53,36 @@ class App extends Component {
         };
     }
 
-
     render() {
         return (
             <div className="container container-main">
                 <div className="row">
-                    <div className="col-md-7">
+                    <PredefinedInputData/>
+                </div>
+                <div className="row">
+                    <div className="col-md-6">
+                        <InputParams inputParams={this.state.inputParams}
+                                     onStartButtonClicked={this.onStartButtonClicked.bind(this)}
+                                     onParamsUpdate={this.onParamsUpdate.bind(this)}/>
                         <div className="col-md-12 left-box-lightblue">
                             <LinearGraph graphData={this.state.graphData}/>
                         </div>
                         <div className="col-md-12 left-box-lightcoral">
                             <Heatmap/>
                         </div>
-                        <div className="col-md-12 left-box-lightseagreen"></div>
                     </div>
-                    <InputParams inputParams={this.state.inputParams}
-                                 onStartButtonClicked={this.onStartButtonClicked.bind(this)}
-                                 onParamsUpdate={this.onParamsUpdate.bind(this)}/>
+                    <div className="col-md-6">
+                        <InputParams inputParams={this.state.inputParams}
+                                     onStartButtonClicked={this.onStartButtonClicked.bind(this)}
+                                     onParamsUpdate={this.onParamsUpdate.bind(this)}/>
+                        <div className="col-md-12 left-box-lightblue">
+                            <LinearGraph graphData={this.state.graphData}/>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
     }
 }
 
-export default App;
+export default Simulation;

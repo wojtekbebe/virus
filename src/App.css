@@ -51,3 +51,27 @@
 .left-box-lightseagreen {
     background-color: lightseagreen;
 }
+
+.add-bottom-line {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.add-bottom-line button {
+    margin-right: 10px;
+}
+
+.set-border {
+    border: 1px solid lightgray;
+    padding: 20px;
+}
+
+.set-border button {
+    font-size: 12px;
+    margin-top: 41px;
+}
+
+.set-border label{
+    font-size: 12px;
+}

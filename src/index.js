@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Simulation from './Simulation';
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+    <div>
+        <Simulation/>
+        <Simulation/>
+    </div>,
   document.getElementById('root')
 );
