@@ -50,31 +50,37 @@ export default class InputParams extends Component {
                     <div className="col-md-4">
                         <div className="form-group">
                             <label htmlFor="resistant">Procent odpornych</label>
-                            <input value={defaultValue.R} id="resistant" className="form-control" onChange={this.resistantValue.bind(this)}/>
+                            <span className="range-label">{defaultValue.R}</span>
+                            <input type="range" value={defaultValue.R} id="resistant" className="form-control" onChange={this.resistantValue.bind(this)}/>
+                            
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
                             <label htmlFor="infectious">Procent zarażonych</label>
-                            <input value={defaultValue.I} id="infectious" className="form-control" onChange={this.infectiousValue.bind(this)}/>
+                            <span className="range-label">{defaultValue.I}</span>
+                            <input type="range" value={defaultValue.I} id="infectious" className="form-control" onChange={this.infectiousValue.bind(this)}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
                             <label htmlFor="infectious">Procent zaszczepionych</label>
-                            <input value={defaultValue.V} id="infectious" className="form-control" onChange={this.vaccinatedValue.bind(this)}/>
+                            <span className="range-label">{defaultValue.V}</span>
+                            <input type="range" value={defaultValue.V} id="infectious" className="form-control" onChange={this.vaccinatedValue.bind(this)}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
                             <label htmlFor="rate1">Współczynnik zaraźliwości</label>
-                            <input value={defaultValue.r} id="rate1" className="form-control" onChange={this.infectiousRateValue.bind(this)}/>
+                            <span className="range-label">{defaultValue.r}</span>
+                            <input type="range" min="0" max="1" step="0.1" value={defaultValue.r} id="rate1" className="form-control" onChange={this.infectiousRateValue.bind(this)}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
                             <label htmlFor="rate2">Współczynnik wyleczalnosci</label>
-                            <input value={defaultValue.a} id="rate2" className="form-control" onChange={this.curabilityRateValue.bind(this)}/>
+                            <span className="range-label">{defaultValue.a}</span>
+                            <input type="range" min="0" max="1" step="0.1" value={defaultValue.a} id="rate2" className="form-control" onChange={this.curabilityRateValue.bind(this)}/>
                         </div>
                     </div>
                     <div className="col-md-4">

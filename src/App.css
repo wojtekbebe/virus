@@ -76,6 +76,13 @@
     font-size: 12px;
 }
 
+.range-label {
+    display: inherit;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 label {
     font-size: 12px;
 }
