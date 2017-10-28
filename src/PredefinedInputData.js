@@ -11,12 +11,19 @@ export default class PredefinedInputData extends Component {
     render() {
         return (
             <div className="col-md-12 add-bottom-line">
-                <button type="submit" className="btn btn-primary">5% niezaszczepionych</button>
-                <button type="submit" className="btn btn-primary">10% niezaszczepionych</button>
-                <button type="submit" className="btn btn-primary">20% niezaszczepionych</button>
-                <button type="submit" className="btn btn-primary">30% niezaszczepionych</button>
-                <button type="submit" className="btn btn-primary">40% niezaszczepionych</button>
-                <button type="submit" className="btn btn-primary">50% niezaszczepionych</button>
+                
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked/>
+                        OSPA: zaszczepieni 20%, niezaszczepieni 80%
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked/>
+                        OSPA: zaszczepieni 70%, niezaszczepieni 30%
+                    </label>
+                </div>
             </div>
         )
     }
