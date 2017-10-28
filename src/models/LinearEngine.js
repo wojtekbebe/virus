@@ -7,7 +7,7 @@ export default class LinearEngine {
         this.resistant = resistant / 100;
         this.susceptible = (100 - infectious - resistant) / 100;
 
-        this.dayCount = 50;
+        this.dayCount = 20;
 
         this.r = r; // wspolczynnik zakaznosci
         this.a = a; // wspolczynnik ozdrowien
