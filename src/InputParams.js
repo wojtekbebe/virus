@@ -2,21 +2,30 @@ import React, { Component } from 'react';
 
 export default class InputParams extends Component {
 
+  onButtonClick() {
+    this.props.onStartButtonClicked();
+  }
+
   onUpdate() {
     this.props.onParamsUpdate({
-        initialPopulation: 5, // TODO: read from inputs
-        //... rest of parameters which we need to settle on
+        R: 5, // odporni, 0-100
+        I: 10, // zarazeni
+        r: 55, // zarazliwosci
+        a: 99,  // wsplicznik wyleczalnosci
+
     })
   }
 
-  onChange() {
-    this.onUpdate();
+  onChange1(R) {
+    this.onUpdate({ R: R });
   }
+
 
   render() {
     return (
       <div className="inputparams">
-        <input onChange={this.onChange.bind(this)} />
+        <input onChange={this.onChange1.bind(this)} />
+        <button onClick={this.onButtonClick.bind(this)} />
       </div>
     )
   }

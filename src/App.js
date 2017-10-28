@@ -14,7 +14,6 @@ class App extends Component {
         engine.setParams(this.data.inputParams);
 
         this.graphData = engine.getGraphData();
-
     }
 
     constructor(...args) {
@@ -24,7 +23,7 @@ class App extends Component {
             inputParams: {
                 // TODO: inital params
             }
-        }
+        };
 
         this.graphData = null;
     }
@@ -40,7 +39,7 @@ class App extends Component {
 
           <LinearGraph graphData={this.graphData} />
 
-        <InputParams inputParams={this.data.inputParams} onParamsUpdate={this.onParamsUpdate.bind(this)} />
+        <InputParams inputParams={this.data.inputParams} onStartButtonClicked={this.onStartButtonClicked.bind(this)} onParamsUpdate={this.onParamsUpdate.bind(this)} />
       </div>
     );
   }
