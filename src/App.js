@@ -19,7 +19,12 @@ class App extends Component {
     }
 
     onStartButtonClicked() {
-        const engine = new LinearEngine(10, 10);
+        const engine = new LinearEngine(
+            this.state.inputParams.I,
+            this.state.inputParams.R,
+            this.state.inputParams.r,
+            this.state.inputParams.a,
+        );
 
         this.setState(Object.assign(
             {},
@@ -37,8 +42,8 @@ class App extends Component {
         this.state = {
             graphData: [],
             inputParams: {
-                R: 0.1,
-                I: 0.2,
+                I: 10,
+                R: 10,
                 r: 0.3,
                 a: 0.4,
             }
