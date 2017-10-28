@@ -8,6 +8,7 @@ export default class InputParams extends Component {
         this.params = {
 
         };
+        
     }
 
   onButtonClick() {
@@ -40,23 +41,25 @@ export default class InputParams extends Component {
 
 
   render() {
+    const deafultValue = this.props.inputParams;
+
     return (
       <div className="inputparams">
         <div className="form-group">
           <label htmlFor="resistant">Procent odpornych</label>
-          <input id="resistant" className="form-control" onChange={this.resistantValue.bind(this)} />
+          <input value={deafultValue.R} id="resistant" className="form-control" onChange={this.resistantValue.bind(this)} />
         </div>
         <div className="form-group">
           <label htmlFor="infectious">Procent zarażonych</label>
-          <input id="infectious" className="form-control" onChange={this.infectiousValue.bind(this)} />
+          <input value={deafultValue.I} id="infectious" className="form-control" onChange={this.infectiousValue.bind(this)} />
         </div>
         <div className="form-group">
           <label htmlFor="infectiousRate">Współczynnik zaraźliwości</label>
-          <input id="infectiousRate" className="form-control" onChange={this.infectiousRateValue.bind(this)} />
+          <input value={deafultValue.r} id="infectiousRate" className="form-control" onChange={this.infectiousRateValue.bind(this)} />
         </div>
         <div className="form-group">
           <label htmlFor="curabilityRate">Współczynnik wyleczalności</label>
-          <input id="curabilityRate" className="form-control" onChange={this.curabilityRateValue.bind(this)} />
+          <input value={deafultValue.a} id="curabilityRate" className="form-control" onChange={this.curabilityRateValue.bind(this)} />
         </div>
         <button onClick={this.onButtonClick.bind(this)}>Rozpocznij symulację</button>
       </div>
