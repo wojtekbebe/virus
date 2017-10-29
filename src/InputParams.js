@@ -54,7 +54,7 @@ export default class InputParams extends Component {
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="vaccinated">Procent zaszczepionych</label>
+                            <label htmlFor="vaccinated">Procent w trakcie szczepienia</label>
                             <span className="range-label">{defaultValue.vaccinated}</span>
                             <input type="range" min="0" max="100" step="0.05" value={defaultValue.vaccinated} id="vaccinated" className="form-control" onChange={this.onUpdate.bind(this, 'vaccinated')}/>
                         </div>
@@ -98,9 +98,9 @@ export default class InputParams extends Component {
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="u">U</label>
+                            <label htmlFor="u">Wskaźnik śmiertelności/dzietności</label>
                             <span className="range-label">{defaultValue.u}</span>
-                            <input type="range" min="0" max="1" step="0.1" value={defaultValue.u} id="u" className="form-control" onChange={this.onUpdate.bind(this, 'u')}/>
+                            <input type="range" min="-1" max="1" step="0.01" value={defaultValue.u} id="u" className="form-control" onChange={this.onUpdate.bind(this, 'u')}/>
                         </div>
                     </div>
                     <div className="col-md-4">

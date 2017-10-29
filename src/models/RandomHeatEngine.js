@@ -1,4 +1,4 @@
-import SVIRLinearEngine from "./SVIRLinearEngine";
+import SVIRLinearEngine from "./SVIREngine";
 
 const WIDTH = 470;
 const HEIGHT = 460;

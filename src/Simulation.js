@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import SVIRLinearEngine from "./models/SVIRLinearEngine";
+import SVIRLinearEngine from "./models/SVIREngine";
 import Heatmap from 'react-heatmap';
 import LinearGraph from "./LinearGraph";
 import InputParams from './InputParams';
@@ -16,7 +16,7 @@ class Simulation extends Component {
             })
         );
 
-        setTimeout(() => this.runSimulation(), 200); // TODO: change to .throttle
+        setTimeout(() => this.runSimulation(), 50); // TODO: change to .throttle
     }
 
     componentDidMount() {
@@ -44,7 +44,7 @@ class Simulation extends Component {
             time: event.target.value,
         }));
 
-        setTimeout(() => this.runSimulation(), 200); // TODO: change to .throttle
+        setTimeout(() => this.runSimulation(), 50); // TODO: change to .throttle
     }
 
     constructor(...args) {
