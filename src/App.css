@@ -125,14 +125,12 @@ input[type=checkbox], input[type=radio] {
     margin-top: 0;
 }
 
-.table-gradient {
+.box-gradient {
+    display: block;
     margin: 0px auto;
+    width: 100%;
+    text-align: center;
     margin-bottom: 20px;
     margin-top: 10px;
     padding-bottom: 10px;
-
-}
-
-.table-gradient td {
-    padding: 5px;
 }
