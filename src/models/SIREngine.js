@@ -1,4 +1,4 @@
-// Prosty silnik oparty o model SIR
+// typial SIR model implementation
 export default class LinearEngine {
     // infectious - procent zarazonych
     // resistant - procent odpornych (zaszczepionych)

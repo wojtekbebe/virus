@@ -23,7 +23,7 @@ export default class RandomHeatEngine {
                     result.push({
                         x,
                         y,
-                        value: I*Math.random(),
+                        value: I*3*Math.random(), // 3 is arbitrary indicator
                     });
                 }
             }
