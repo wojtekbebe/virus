@@ -22,8 +22,8 @@ export default class App extends Component {
     return (
         <div className="container container-main">
           <div className="row header text-center">
-            <h2>Symulator "Virus"</h2>
-            <p>Zobacz jak rozprzestrzenia się epidemia choroby w zależności od liczby zaszczepionych osobników w populacji.</p>
+            <h2>Model SVIR rozprzestrzeniania się infekcji</h2>
+            <p>Model ilościowy rozprzestrzeniania się infekcji w populacji w zależności od wskaźnika szczepień (oraz innych parametrów)</p>
           </div>
           <div className="row">
             <PredefinedInputData onParamsChange={this.onParamsChange.bind(this)}/>
