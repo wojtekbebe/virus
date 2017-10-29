@@ -39,10 +39,6 @@ class Simulation extends Component {
         );
     }
 
-    onDebugButtonClick() {
-        console.log(JSON.stringify(this.state.inputParams));
-    }
-
     onTimeChange(event) {
         this.setState(Object.assign({}, this.state, {
             time: event.target.value,
@@ -62,7 +58,7 @@ class Simulation extends Component {
                 }
             ));
 
-            setTimeout(() => this.runSimulation(), 50); // TODO: change to .throttle
+            setTimeout(() => this.runSimulation(), 10); // TODO: change to .throttle
         }
     }
 
@@ -103,10 +99,6 @@ class Simulation extends Component {
             <div className="col-md-6">
                 <div className="col-md-12 left-box-lightblue">
                     <LinearGraph graphData={this.state.graphData}/>
-                </div>
-                <div>
-                        <button onClick={this.onDebugButtonClick.bind(this)} >copy params</button>
-
                 </div>
                 <InputParams inputParams={this.state.inputParams}
                              onParamsUpdate={this.onParamsUpdate.bind(this)}/>
