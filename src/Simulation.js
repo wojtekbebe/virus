@@ -39,6 +39,10 @@ class Simulation extends Component {
         );
     }
 
+    onDebugButtonClick() {
+        console.log(JSON.stringify(this.state.inputParams));
+    }
+
     onTimeChange(event) {
         this.setState(Object.assign({}, this.state, {
             time: event.target.value,
@@ -62,9 +66,9 @@ class Simulation extends Component {
 
                 daysCount: 130,
 
-                a: 0.0,   // jaka cześć ludzi jest z każdym krokiem przenoszona do procesu szczepienia
-                y1: 1.0,  // jaka część ludzi zaszczepionych w każdym kroku przenoszona jest do odpornych (bez różnicy czy naturalnie czy nie)
-                b1: 0.0 ,  // jaka częsć ludzi zaszczepionych w kaðym kroku wciąż będzie zarażana ( powinno być w oczywsity sposób o rząd wielkości mniejsze od b)
+                a: 0.01,   // jaka cześć ludzi jest z każdym krokiem przenoszona do procesu szczepienia
+                y1: 0.01,  // jaka część ludzi zaszczepionych w każdym kroku przenoszona jest do odpornych (bez różnicy czy naturalnie czy nie)
+                b1: 0.005 ,  // jaka częsć ludzi zaszczepionych w kaðym kroku wciąż będzie zarażana ( powinno być w oczywsity sposób o rząd wielkości mniejsze od b)
                 u: 0.01    ,   // śmiertelność / dzietność w każdym kroku
                 b: 0.09,   // jaka część podatnych ludzi zostanie zarażona w każdym kroku
                 y: 0.015,   // jaka część ludzi chorych w każdym kroku przenoszona jest do ludzi zdrowych i odpornych
@@ -85,6 +89,10 @@ class Simulation extends Component {
                 <div className="col-md-12 left-box-lightblue">
                     <LinearGraph graphData={this.state.graphData}/>
                 </div>
+                <div>
+                        <button onClick={this.onDebugButtonClick.bind(this)} >copy params</button>
+
+                </div>
                 <InputParams inputParams={this.state.inputParams}
                              onParamsUpdate={this.onParamsUpdate.bind(this)}/>
                 <div className="col-md-12 left-box-heatmap">
@@ -94,6 +102,7 @@ class Simulation extends Component {
                         <input type="range" min="1" max={this.state.inputParams.daysCount} step="1" value={this.state.time} id="time" onChange={this.onTimeChange.bind(this)} className="form-control"/>
                     </div>
                 </div>
+
             </div>
         );
     }

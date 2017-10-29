@@ -77,42 +77,42 @@ export default class InputParams extends Component {
                         <div className="form-group">
                             <label htmlFor="a">Wskaźnik szczepień</label>
                             <span className="range-label">{defaultValue.a}</span>
-                            <input type="range" min="0" max="1" step="0.01" value={defaultValue.a} id="a" className="form-control" onChange={this.onUpdate.bind(this, 'a')}/>
+                            <input type="range" min="0" max="0.1" step="0.01" value={defaultValue.a} id="a" className="form-control" onChange={this.onUpdate.bind(this, 'a')}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
                             <label htmlFor="y1">Wskaźnik nabierania odporności przez szczepionych</label>
                             <span className="range-label">{defaultValue.y1}</span>
-                            <input type="range" min="0" max="1" step="0.01" value={defaultValue.y1} id="y1" className="form-control" onChange={this.onUpdate.bind(this, 'y1')}/>
+                            <input type="range" min="0" max="0.1" step="0.01" value={defaultValue.y1} id="y1" className="form-control" onChange={this.onUpdate.bind(this, 'y1')}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
                             <label htmlFor="b1">Wskaźnik zachorowań w trakcie nabierania odpornosci</label>
                             <span className="range-label">{defaultValue.b1}</span>
-                            <input type="range" min="0" max="1" step="0.01" value={defaultValue.b1} id="b1" className="form-control" onChange={this.onUpdate.bind(this, 'b1')}/>
+                            <input type="range" min="0" max="0.1" step="0.01" value={defaultValue.b1} id="b1" className="form-control" onChange={this.onUpdate.bind(this, 'b1')}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
                             <label htmlFor="u">Wskaźnik śmiertelności/dzietności<br/><br/></label>
                             <span className="range-label">{defaultValue.u}</span>
-                            <input type="range" min="0" max="1" step="0.01" value={defaultValue.u} id="u" className="form-control" onChange={this.onUpdate.bind(this, 'u')}/>
+                            <input type="range" min="0" max="0.1" step="0.01" value={defaultValue.u} id="u" className="form-control" onChange={this.onUpdate.bind(this, 'u')}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
                             <label htmlFor="b">Wskaźnik zaraźliwości<br/><br/></label>
                             <span className="range-label">{defaultValue.b}</span>
-                            <input type="range" min="0" max="1" step="0.01" value={defaultValue.b} id="b" className="form-control" onChange={this.onUpdate.bind(this, 'b')}/>
+                            <input type="range" min="0" max="0.1" step="0.01" value={defaultValue.b} id="b" className="form-control" onChange={this.onUpdate.bind(this, 'b')}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
                             <label htmlFor="y">Wskaźnik ozdrowień/uodpornień</label>
                             <span className="range-label">{defaultValue.y}</span>
-                            <input type="range" min="0" max="1" step="0.01" value={defaultValue.y} id="y" className="form-control" onChange={this.onUpdate.bind(this, 'y')}/>
+                            <input type="range" min="0" max="0.1" step="0.01" value={defaultValue.y} id="y" className="form-control" onChange={this.onUpdate.bind(this, 'y')}/>
                         </div>
                     </div>
 
