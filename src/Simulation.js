@@ -103,6 +103,11 @@ class Simulation extends Component {
                              onParamsUpdate={this.onParamsUpdate.bind(this)}/>
                 <div className="col-md-12 left-box-heatmap">
                     <Heatmap height={450} width={450} max={1} unit="pixels" data={this.state.heatData}/>
+                    <div className="col-md-12">
+                        <table className="table-gradient">
+                            <tr><td>odporni</td><td><img src="heat_map_gradient.jpg"/></td><td>zarażeni</td></tr>
+                        </table>
+                    </div>
                     <div className="form-group">
                         <span className="range-label">Czas</span>
                         <input type="range" min="1" max={this.state.inputParams.daysCount} step="1" value={this.state.time} id="time" onChange={this.onTimeChange.bind(this)} className="form-control"/>

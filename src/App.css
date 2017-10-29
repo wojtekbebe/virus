@@ -121,6 +121,19 @@ input[type=checkbox], input[type=radio] {
     color: #fff;
     font-weight: bold;
 }
+
 .header h2 {
     margin-top: 0;
+}
+
+.table-gradient {
+    margin: 0px auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.table-gradient td {
+    padding: 5px;
 }
