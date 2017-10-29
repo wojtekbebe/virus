@@ -3,10 +3,8 @@ import SVIRLinearEngine from "./SVIREngine";
 const WIDTH = 470;
 const HEIGHT = 460;
 
+// generuje losowe dane do sprawdzeni czy w ogole heatmapa dziala
 export default class RandomHeatEngine {
-    // infectious - procent zarazonych
-    // resistant - procent odpornych (zaszczepionych)
-    // susceptible - podatni
     constructor(params) {
         this.linearEngine = new SVIRLinearEngine(params)
 
@@ -15,6 +13,7 @@ export default class RandomHeatEngine {
 
 
     getHeatData(t) {
+        // ugly - TODO: refactor
         try {
             const I = this.data[t].I;
 
@@ -35,9 +34,6 @@ export default class RandomHeatEngine {
 
         }
 
-        console.log('empty result');
         return [];
-
-
     }
 }

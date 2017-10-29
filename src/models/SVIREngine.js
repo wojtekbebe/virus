@@ -1,3 +1,5 @@
+// model oparty na SVIR
+// http://izt.ciens.ucv.ve/ecologia/Archivos/ECO_POB%202008/ECOPO6_2008/Liu%20y%20col_II%202008.pdf
 export default class SVIRLinearEngine {
     constructor(params) {
         this.infectious  = params.infectious / 100.0; //infectious / 100;
@@ -8,8 +10,8 @@ export default class SVIRLinearEngine {
         this.daysCount = params.daysCount;
 
         this.a = params.a;   // jaka cześć ludzi jest z każdym krokiem przenoszona do procesu szczepienia
-        this.y1 = params.y1;  // jaka część ludzi zaszczepionych w każdym kroku przenoszona jest do odpornych (bez różnicy czy naturalnie czy nie)
-        this.b1 = params.b1;  // jaka częsć ludzi zaszczepionych w kaðym kroku wciąż będzie zarażana ( powinno być w oczywsity sposób o rząd wielkości mniejsze od b)
+        this.y1 = params.y1; // jaka część ludzi zaszczepionych w każdym kroku przenoszona jest do odpornych (bez różnicy czy naturalnie czy nie)
+        this.b1 = params.b1; // jaka częsć ludzi zaszczepionych w kaðym kroku wciąż będzie zarażana ( powinno być w oczywsity sposób o rząd wielkości mniejsze od b)
         this.u = params.u;   // śmiertelność / dzietność w każdym kroku
         this.b = params.b;   // jaka część podatnych ludzi zostanie zarażona w każdym kroku
         this.y = params.y;   // jaka część ludzi chorych w każdym kroku przenoszona jest do ludzi zdrowych i odpornych
