@@ -82,15 +82,13 @@ class Simulation extends Component {
     render() {
         return (
             <div className="col-md-6">
-                <InputParams inputParams={this.state.inputParams}
-                             onParamsUpdate={this.onParamsUpdate.bind(this)}/>
                 <div className="col-md-12 left-box-lightblue">
                     <LinearGraph graphData={this.state.graphData}/>
                 </div>
+                <InputParams inputParams={this.state.inputParams}
+                             onParamsUpdate={this.onParamsUpdate.bind(this)}/>
                 <div className="col-md-12 left-box-heatmap">
                     <Heatmap height={450} width={450} max={1} unit="pixels" data={this.state.heatData}/>
-                </div>
-                <div className="col-md-12 time-range">
                     <div className="form-group">
                         <span className="range-label">Czas</span>
                         <input type="range" min="1" max="100" step="1" value={this.state.time} id="time" onChange={this.onTimeChange.bind(this)} className="form-control"/>
