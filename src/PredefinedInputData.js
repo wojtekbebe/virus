@@ -18,8 +18,6 @@ export default class PredefinedInputData extends Component {
                     data: {"infectious":5,"resistant":5,"vaccinated":0,"susceptible":90,"daysCount":"500","a":"0.05","y1":0.1,"b1":0.005,"u":0.01,"b":0.09,"y":0.015},
                 },
             },
-
-
         ]
     }
 
@@ -29,7 +27,7 @@ export default class PredefinedInputData extends Component {
                 <div className="form-check">
                     <label className="form-check-label">
                         <button className="btn btn-success" onClick={this.props.onParamsChange.bind(this, this.data[0].left.data, this.data[0].right.data)}>
-                            Załaduj przykładowe dane obrazujące rozprzetrzenianie infekcji w populacji szczepionej i nieszczepionej
+                            Załaduj przykładowe dane obrazujące rozprzetrzenianie infekcji w populacji z wysokim oraz niskim wskaźnikiem szczepień
                         </button>
                     </label>
                 </div>
