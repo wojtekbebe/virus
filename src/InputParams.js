@@ -59,7 +59,7 @@ export default class InputParams extends Component {
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="susceptible">Procent podatnych</label>
+                            <label htmlFor="susceptible">% podatnych</label>
                             <span className="range-label">{defaultValue.susceptible}</span>
                             <input type="range" min="0" max="100" step="0.05" value={defaultValue.susceptible} id="susceptible" className="form-control" onChange={this.onUpdate.bind(this, 'susceptible')}/>
                         </div>
