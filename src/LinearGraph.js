@@ -12,6 +12,10 @@ export default class LinearGraph extends Component {
         }
     }
 
+    percentFormatter(d) {
+        return `${(d*100)}%`;
+    }
+
     render() {
         return (
             <div className="lineargraph" style={this.style}>
@@ -29,7 +33,7 @@ export default class LinearGraph extends Component {
 
                     <XAxis label={{ value:"liczba dni", position: "insideBottomRight", dy:10}} dataKey="t"/>
 
-                    <YAxis label={{ value:"% populacji", position: "insideTopLeft", dy:-10, dx:60}}/>
+                    <YAxis tickFormatter={this.percentFormatter} label={{ value:"% populacji", position: "insideTopLeft", dy:-10, dx:60}}/>
                 </AreaChart>
             </div>
         )
