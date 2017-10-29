@@ -67,7 +67,7 @@ export default class InputParams extends Component {
 
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="daysCount">Czas</label>
+                            <label htmlFor="daysCount">Czas trwania symulacji</label>
                             <span className="range-label">{defaultValue.daysCount}</span>
                             <input type="range" min="0" max="1000" step="1" value={defaultValue.daysCount} id="daysCount" className="form-control" onChange={this.onUpdate.bind(this, 'daysCount')}/>
                         </div>
@@ -89,21 +89,21 @@ export default class InputParams extends Component {
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="b1">Wskaźnik zachorowań w trakcie nabierania odpornosci</label>
+                            <label htmlFor="b1"><br/>Wskaźnik zachorowań w trakcie nabierania odpornosci</label>
                             <span className="range-label">{defaultValue.b1}</span>
                             <input type="range" min="0" max="0.1" step="0.01" value={defaultValue.b1} id="b1" className="form-control" onChange={this.onUpdate.bind(this, 'b1')}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="u">Wskaźnik śmiertelności/dzietności<br/><br/></label>
+                            <label htmlFor="u"><br/>Wskaźnik śmiertelności/dzietności</label>
                             <span className="range-label">{defaultValue.u}</span>
                             <input type="range" min="0" max="0.1" step="0.01" value={defaultValue.u} id="u" className="form-control" onChange={this.onUpdate.bind(this, 'u')}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="b">Wskaźnik zaraźliwości<br/><br/></label>
+                            <label htmlFor="b"><br/>Wskaźnik zaraźliwości</label>
                             <span className="range-label">{defaultValue.b}</span>
                             <input type="range" min="0" max="0.1" step="0.01" value={defaultValue.b} id="b" className="form-control" onChange={this.onUpdate.bind(this, 'b')}/>
                         </div>
