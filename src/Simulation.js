@@ -64,7 +64,7 @@ class Simulation extends Component {
                 vaccinated: 0, //vaccinated,
                 susceptible: 90, //(100 - infectious - resistant) / 100,
 
-                daysCount: 130,
+                daysCount: 330,
 
                 a: 0.01,   // jaka cześć ludzi jest z każdym krokiem przenoszona do procesu szczepienia
                 y1: 0.1,  // jaka część ludzi zaszczepionych w każdym kroku przenoszona jest do odpornych (bez różnicy czy naturalnie czy nie)
