@@ -26,8 +26,8 @@ export default class PredefinedInputData extends Component {
             <div className="col-md-12 add-bottom-line text-center">
                 <div className="form-check">
                     <label className="form-check-label">
-                        <button className="btn btn-success" onClick={this.props.onParamsChange.bind(this, this.data[0].left.data, this.data[0].right.data)}>
-                            Załaduj przykładowe dane obrazujące rozprzetrzenianie infekcji w populacji z wysokim oraz niskim wskaźnikiem szczepień
+                        <button className="btn btn-success btn-lg" onClick={this.props.onParamsChange.bind(this, this.data[0].left.data, this.data[0].right.data)}>
+                            <strong>Załaduj przykładowe dane obrazujące rozprzetrzenianie infekcji w populacji z wysokim oraz niskim wskaźnikiem szczepień</strong>
                         </button>
                     </label>
                 </div>
