@@ -7,7 +7,6 @@ export default class LinearGraph extends Component {
         super(...args);
 
         this.style = {
-            //border: "1px solid green",
             display: "block",
             margin: "0px auto",
         }
@@ -25,7 +24,7 @@ export default class LinearGraph extends Component {
                     <Line type="monotone" dataKey="Sp" name="podatni" stroke="#00FF00" dot={false}/>
                     <Line type="monotone" dataKey="Ip" name="zakażeni" stroke="#FF0000" dot={false}/>
                     <Line type="monotone" dataKey="Rp" name="odporni" stroke="#0000FF" dot={false}/>
-                    <Line type="monotone" dataKey="Vp" name="w trakcie nabywania odporoności" stroke="#222222"/>
+                    <Line type="monotone" dataKey="Vp" name="w trakcie nabywania odporoności" dot={false} stroke="#222222"/>
                     <XAxis label="liczba dni" dataKey="t"/>
                     <YAxis label="% populacji"/>
                 </LineChart>
