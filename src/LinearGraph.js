@@ -24,8 +24,8 @@ export default class LinearGraph extends Component {
                     <Legend verticalAlign="bottom"/>
                     <Area type="monotone" dataKey="Vp" stackId="1" name="w trakcie nabywania odporoności" dot={false} stroke="#222222" fill="#222222"/>
                     <Area type="monotone" dataKey="Ip" stackId="1" name="zakażeni" stroke="#FF0000" fill="#ff0000" dot={false}/>
-                    <Area type="monotone" dataKey="Rp" stackId="1" name="odporni" stroke="#00FF00" fill="#00ff00" dot={false}/>
-                    <Area type="monotone" dataKey="Sp" stackId="1" name="podatni" stroke="#FFA500" fill="#ffa500" dot={false}/>
+                    <Area type="monotone" dataKey="Rp" stackId="1" name="odporni" stroke="#82ca9d" fill="#82ca9d" dot={false}/>
+                    <Area type="monotone" dataKey="Sp" stackId="1" name="podatni" stroke="#ffbc58" fill="#ffbc58" dot={false}/>
 
 
 
