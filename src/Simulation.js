@@ -29,12 +29,12 @@ class Simulation extends Component {
         const heatEngine = new RandomHeatEngine(this.state.inputParams);
 
         this.setState(Object.assign(
-                {},
-                this.state,
-                {
-                    graphData: linearEngine.getGraphData(),
-                    heatData: heatEngine.getHeatData(this.state.time),
-                }
+            {},
+            this.state,
+            {
+                graphData: linearEngine.getGraphData(),
+                heatData: heatEngine.getHeatData(this.state.time),
+            }
             )
         );
     }
@@ -53,7 +53,7 @@ class Simulation extends Component {
                 {},
                 this.state,
                 {
-                    inputParams: Object.assign({},nextProps.predefinedParams),
+                    inputParams: Object.assign({}, nextProps.predefinedParams),
                 }
             ));
 
@@ -78,8 +78,8 @@ class Simulation extends Component {
 
                 a: 0.01,   // jaka cześć ludzi jest z każdym krokiem przenoszona do procesu szczepienia
                 y1: 0.1,  // jaka część ludzi zaszczepionych w każdym kroku przenoszona jest do odpornych (bez różnicy czy naturalnie czy nie)
-                b1: 0.005 ,  // jaka częsć ludzi zaszczepionych w kaðym kroku wciąż będzie zarażana ( powinno być w oczywsity sposób o rząd wielkości mniejsze od b)
-                u: 0.01    ,   // śmiertelność / dzietność w każdym kroku
+                b1: 0.005,  // jaka częsć ludzi zaszczepionych w kaðym kroku wciąż będzie zarażana ( powinno być w oczywsity sposób o rząd wielkości mniejsze od b)
+                u: 0.01,   // śmiertelność / dzietność w każdym kroku
                 b: 0.09,   // jaka część podatnych ludzi zostanie zarażona w każdym kroku
                 y: 0.015,   // jaka część ludzi chorych w każdym kroku przenoszona jest do ludzi zdrowych i odpornych
             },
@@ -103,12 +103,20 @@ class Simulation extends Component {
                              onParamsUpdate={this.onParamsUpdate.bind(this)}/>
                 <div className="col-md-12 left-box-heatmap">
                     <Heatmap height={450} width={450} max={1} unit="pixels" data={this.state.heatData}/>
-                    <div className="form-group">
-                        <span className="range-label">Czas</span>
-                        <input type="range" min="1" max={this.state.inputParams.daysCount} step="1" value={this.state.time} id="time" onChange={this.onTimeChange.bind(this)} className="form-control"/>
+                </div>
+                <div className="box-gradient">
+                    <div>
+                        wskaźnik zarażeń
+                    </div>
+                    <div>
+                        <img src="heat_map_gradient.jpg"/>
                     </div>
                 </div>
-
+                <div className="form-group">
+                    <label htmlFor="range" className="time-label"><br/>Czas</label>
+                    <span className="day-span">Dzień: {this.state.time}</span>
+                    <input type="range" min="1" max={this.state.inputParams.daysCount} step="1" value={this.state.time} id="time" onChange={this.onTimeChange.bind(this)} className="form-control"/>
+                </div>
             </div>
         );
     }
