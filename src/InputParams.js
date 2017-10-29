@@ -67,7 +67,7 @@ export default class InputParams extends Component {
 
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="daysCount">Czas trwania symulacji</label>
+                            <label htmlFor="daysCount">Czas trwania symulacji (dni)</label>
                             <span className="range-label">{defaultValue.daysCount}</span>
                             <input type="range" min="0" max="1000" step="1" value={defaultValue.daysCount} id="daysCount" className="form-control" onChange={this.onUpdate.bind(this, 'daysCount')}/>
                         </div>
