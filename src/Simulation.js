@@ -113,7 +113,8 @@ class Simulation extends Component {
                     </div>
                 </div>
                 <div className="form-group">
-                    <span className="range-label">Czas</span>
+                    <label htmlFor="range" className="time-label"><br/>Czas</label>
+                    <span className="day-span">Dzień: {this.state.time}</span>
                     <input type="range" min="1" max={this.state.inputParams.daysCount} step="1" value={this.state.time} id="time" onChange={this.onTimeChange.bind(this)} className="form-control"/>
                 </div>
             </div>

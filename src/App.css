@@ -114,6 +114,20 @@ input[type=checkbox], input[type=radio] {
     font-size: 20px;
 }
 
+.time-label{
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+}
+
+.day-span{
+    padding-bottom: 5px;
+    width: 100%;
+    text-align: center;
+    display: block;
+    height: 25px;
+}
+
 .header {
     background-color: #ccc8c8;
     padding: 10px 0;
@@ -130,7 +144,6 @@ input[type=checkbox], input[type=radio] {
     margin: 0px auto;
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
     margin-top: 10px;
     padding-bottom: 10px;
 }
