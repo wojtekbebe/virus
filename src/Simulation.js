@@ -51,6 +51,21 @@ class Simulation extends Component {
         setTimeout(() => this.runSimulation(), 50); // TODO: change to .throttle
     }
 
+    componentWillReceiveProps(nextProps) {
+        console.log('will receive props');
+        if (this.props.predefinedParams !== nextProps.predefinedParams) {
+            this.setState(Object.assign(
+                {},
+                this.state,
+                {
+                    inputParams: Object.assign({},nextProps.predefinedParams),
+                }
+            ));
+
+            setTimeout(() => this.runSimulation(), 50); // TODO: change to .throttle
+        }
+    }
+
     constructor(...args) {
         super(...args);
 
