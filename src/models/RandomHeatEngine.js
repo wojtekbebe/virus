@@ -21,8 +21,8 @@ export default class RandomHeatEngine {
             for (var x = 50; x <= WIDTH; x += 30) {
                 for (var y = 50; y <= HEIGHT; y += 30) {
                     result.push({
-                        x,
-                        y,
+                        x: (x + (20 * (Math.random() - 0.5))),
+                        y: (y + (20 * (Math.random() - 0.5))),
                         value: I*3*Math.random(), // 3 is arbitrary indicator
                     });
                 }
