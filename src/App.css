@@ -30,7 +30,9 @@
 .container-main {
     margin-top: 30px;
     border: 1px solid lightgray;
-    padding: 20px;
+    padding-bottom: 20px;
+    color: #5a5a5a;
+    border-radius: 4px;
 }
 
 .left-box-lightblue, .left-box-lightcoral, .left-box-lightseagreen {
@@ -56,6 +58,7 @@
 .add-bottom-line {
     border-bottom: 1px solid lightgray;
     padding-bottom: 20px;
+    padding-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -74,7 +77,7 @@
 }
 
 .set-border label {
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .range-label {
@@ -110,4 +113,14 @@ input[type=checkbox], input[type=radio] {
 
 .time-range .range-label {
     font-size: 20px;
+}
+
+.header {
+    background-color: #ccc8c8;
+    padding: 10px 0;
+    color: #fff;
+    font-weight: bold;
+}
+.header h2 {
+    margin-top: 0;
 }
