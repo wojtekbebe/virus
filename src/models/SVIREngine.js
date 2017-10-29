@@ -40,7 +40,6 @@ export default class SVIRLinearEngine {
         for (var t = 1; t < this.daysCount; ++t) {
             deltaS = u - u*S - b*S*I - a*S;
             deltaV = a*S - b1*V*I - y1*V - u*V;
-            console.log('deltaV: ', a, b1, y1, u, S, V, I, R);
             deltaI = b*S*I + b1*V*I - y*I - u*I;
             deltaR = y1*V + y*I - u*R;
 

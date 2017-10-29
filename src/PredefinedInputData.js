@@ -23,7 +23,6 @@ export default class PredefinedInputData extends Component {
                         OSPA: zaszczepieni 70%, niezaszczepieni 30%
                     </label>
                 </div>
-                <button type="submit" className="btn btn-primary">Rozpocznij symulację</button>
             </div>
         )
     }

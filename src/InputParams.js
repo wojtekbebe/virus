@@ -15,8 +15,6 @@ export default class InputParams extends Component {
 
     render() {
         const defaultValue = this.props.inputParams || {};
-        console.log("REDNER, props input y", this.props.inputParams.y);
-        console.log("REDNER, params state input y", this.params.y);
         /*
         // pierwsze cztery do 100
         this.infectious = 0.05; //infectious / 100;
@@ -40,21 +38,21 @@ export default class InputParams extends Component {
                 <div className="row">
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="resistant">Procent odpornych</label>
+                            <label htmlFor="resistant">% odpornych</label>
                             <span className="range-label">{defaultValue.resistant}</span>
                             <input type="range" min="0" max="100" step="0.05" value={defaultValue.resistant} id="resistant" className="form-control" onChange={this.onUpdate.bind(this, 'resistant')}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="infectious">Procent zarażonych</label>
+                            <label htmlFor="infectious">% zarażonych</label>
                             <span className="range-label">{defaultValue.infectious}</span>
                             <input type="range" min="0" max="100" step="0.05" value={defaultValue.infectious} id="infectious" className="form-control" onChange={this.onUpdate.bind(this, 'infectious')}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="vaccinated">Procent w trakcie szczepienia</label>
+                            <label htmlFor="vaccinated">% w trakcie nabywania odporności</label>
                             <span className="range-label">{defaultValue.vaccinated}</span>
                             <input type="range" min="0" max="100" step="0.05" value={defaultValue.vaccinated} id="vaccinated" className="form-control" onChange={this.onUpdate.bind(this, 'vaccinated')}/>
                         </div>
@@ -71,7 +69,7 @@ export default class InputParams extends Component {
                         <div className="form-group">
                             <label htmlFor="daysCount">Czas</label>
                             <span className="range-label">{defaultValue.daysCount}</span>
-                            <input type="range" min="0" max="100" step="1" value={defaultValue.daysCount} id="daysCount" className="form-control" onChange={this.onUpdate.bind(this, 'daysCount')}/>
+                            <input type="range" min="0" max="1000" step="1" value={defaultValue.daysCount} id="daysCount" className="form-control" onChange={this.onUpdate.bind(this, 'daysCount')}/>
                         </div>
                     </div>
 
@@ -79,42 +77,42 @@ export default class InputParams extends Component {
                         <div className="form-group">
                             <label htmlFor="a">Wskaźnik szczepień</label>
                             <span className="range-label">{defaultValue.a}</span>
-                            <input type="range" min="0" max="1" step="0.01" value={defaultValue.a} id="a" className="form-control" onChange={this.onUpdate.bind(this, 'a')}/>
+                            <input type="range" min="0" max="0.1" step="0.01" value={defaultValue.a} id="a" className="form-control" onChange={this.onUpdate.bind(this, 'a')}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
                             <label htmlFor="y1">Wskaźnik nabierania odporności przez szczepionych</label>
                             <span className="range-label">{defaultValue.y1}</span>
-                            <input type="range" min="0" max="1" step="0.01" value={defaultValue.y1} id="y1" className="form-control" onChange={this.onUpdate.bind(this, 'y1')}/>
+                            <input type="range" min="0" max="0.1" step="0.01" value={defaultValue.y1} id="y1" className="form-control" onChange={this.onUpdate.bind(this, 'y1')}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
                             <label htmlFor="b1">Wskaźnik zachorowań w trakcie nabierania odpornosci</label>
                             <span className="range-label">{defaultValue.b1}</span>
-                            <input type="range" min="0" max="1" step="0.01" value={defaultValue.b1} id="b1" className="form-control" onChange={this.onUpdate.bind(this, 'b1')}/>
+                            <input type="range" min="0" max="0.1" step="0.01" value={defaultValue.b1} id="b1" className="form-control" onChange={this.onUpdate.bind(this, 'b1')}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="u">Wskaźnik śmiertelności/dzietności</label>
+                            <label htmlFor="u">Wskaźnik śmiertelności/dzietności<br/><br/></label>
                             <span className="range-label">{defaultValue.u}</span>
-                            <input type="range" min="-1" max="1" step="0.01" value={defaultValue.u} id="u" className="form-control" onChange={this.onUpdate.bind(this, 'u')}/>
+                            <input type="range" min="0" max="0.1" step="0.01" value={defaultValue.u} id="u" className="form-control" onChange={this.onUpdate.bind(this, 'u')}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="b">Wskaźnik zaraźliwości</label>
+                            <label htmlFor="b">Wskaźnik zaraźliwości<br/><br/></label>
                             <span className="range-label">{defaultValue.b}</span>
-                            <input type="range" min="0" max="1" step="0.01" value={defaultValue.b} id="b" className="form-control" onChange={this.onUpdate.bind(this, 'b')}/>
+                            <input type="range" min="0" max="0.1" step="0.01" value={defaultValue.b} id="b" className="form-control" onChange={this.onUpdate.bind(this, 'b')}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
                             <label htmlFor="y">Wskaźnik ozdrowień/uodpornień</label>
                             <span className="range-label">{defaultValue.y}</span>
-                            <input type="range" min="0" max="1" step="0.01" value={defaultValue.y} id="y" className="form-control" onChange={this.onUpdate.bind(this, 'y')}/>
+                            <input type="range" min="0" max="0.1" step="0.01" value={defaultValue.y} id="y" className="form-control" onChange={this.onUpdate.bind(this, 'y')}/>
                         </div>
                     </div>
 

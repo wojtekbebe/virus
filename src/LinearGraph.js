@@ -25,7 +25,7 @@ export default class LinearGraph extends Component {
                     <Line type="monotone" dataKey="Sp" name="podatni" stroke="#00FF00" dot={false}/>
                     <Line type="monotone" dataKey="Ip" name="zakażeni" stroke="#FF0000" dot={false}/>
                     <Line type="monotone" dataKey="Rp" name="odporni" stroke="#0000FF" dot={false}/>
-                    <Line type="monotone" dataKey="Vp" name="w trakcie szczepienia" stroke="#222222"/>
+                    <Line type="monotone" dataKey="Vp" name="w trakcie nabywania odporoności" stroke="#222222"/>
                     <XAxis label="liczba dni" dataKey="t"/>
                     <YAxis label="% populacji"/>
                 </LineChart>
