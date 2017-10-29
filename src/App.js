@@ -5,7 +5,6 @@ import PredefinedInputData from './PredefinedInputData';
 export default class App extends Component {
   onParamsChange(left, right) {
 
-    console.log('on params change')
     // TODO: troche brzydkie
     this.setState({
         left: Object.assign({}, left), // to make sure we have new object

@@ -48,7 +48,6 @@ class Simulation extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('will receive props');
         if (this.props.predefinedParams !== nextProps.predefinedParams) {
             this.setState(Object.assign(
                 {},
