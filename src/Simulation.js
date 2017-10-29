@@ -62,7 +62,7 @@ class Simulation extends Component {
 
                 daysCount: 30,
 
-                a: 0.1,   // jaka cześć ludzi jest z każdym krokiem przenoszona do procesu szczepienia
+                a: 0.0,   // jaka cześć ludzi jest z każdym krokiem przenoszona do procesu szczepienia
                 y1: 1.0,  // jaka część ludzi zaszczepionych w każdym kroku przenoszona jest do odpornych (bez różnicy czy naturalnie czy nie)
                 b1: 0.0 ,  // jaka częsć ludzi zaszczepionych w kaðym kroku wciąż będzie zarażana ( powinno być w oczywsity sposób o rząd wielkości mniejsze od b)
                 u: 0.0    ,   // śmiertelność / dzietność w każdym kroku
@@ -91,7 +91,7 @@ class Simulation extends Component {
                     <Heatmap height={450} width={450} max={1} unit="pixels" data={this.state.heatData}/>
                     <div className="form-group">
                         <span className="range-label">Czas</span>
-                        <input type="range" min="1" max="100" step="1" value={this.state.time} id="time" onChange={this.onTimeChange.bind(this)} className="form-control"/>
+                        <input type="range" min="1" max={this.state.inputParams.daysCount} step="1" value={this.state.time} id="time" onChange={this.onTimeChange.bind(this)} className="form-control"/>
                     </div>
                 </div>
             </div>
