@@ -22,9 +22,9 @@ export default class LinearGraph extends Component {
                 >
                     <Legend verticalAlign="bottom"/>
                     <Line type="monotone" dataKey="Sp" name="podatni" stroke="#FFA500" dot={false}/>
-                    <Line type="monotone" dataKey="Ip" name="zakażeni" stroke="#FF0000" dot={false}/>
+                    <Line type="monotone" dataKey="Ip" name="zakażeni" stroke="#FF0000" strokeWidth={4} dot={false}/>
                     <Line type="monotone" dataKey="Rp" name="odporni" stroke="#00FF00" dot={false}/>
-                    <Line type="monotone" dataKey="Vp" name="w trakcie nabywania odporoności" dot={false} stroke="#222222"/>
+                    <Line type="monotone" dataKey="Vp" name="w trakcie nabywania odporoności" strokeDasharray="5 5" dot={false} stroke="#222222"/>
                     <XAxis label={{ value:"liczba dni", position: "insideBottomRight", dy:10}} dataKey="t"/>
                     <YAxis label={{ value:"% populacji", position: "insideTopLeft", dy:-10, dx:60}}/>
                 </LineChart>
