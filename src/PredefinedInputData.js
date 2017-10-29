@@ -6,6 +6,10 @@ export default class PredefinedInputData extends Component {
         super(...args);
 
         this.params = {};
+        /**
+         {"infectious":5,"resistant":5,"vaccinated":0,"susceptible":90,"daysCount":"474","a":"0","y1":0.1,"b1":0.005,"u":"0.01","b":0.09,"y":0.015}
+         {"infectious":5,"resistant":5,"vaccinated":0,"susceptible":90,"daysCount":"491","a":"0.05","y1":0.1,"b1":0.005,"u":0.01,"b":0.09,"y":0.015}
+         */
     }
 
     render() {
