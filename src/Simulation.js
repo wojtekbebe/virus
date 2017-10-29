@@ -67,7 +67,7 @@ class Simulation extends Component {
                 daysCount: 130,
 
                 a: 0.01,   // jaka cześć ludzi jest z każdym krokiem przenoszona do procesu szczepienia
-                y1: 0.01,  // jaka część ludzi zaszczepionych w każdym kroku przenoszona jest do odpornych (bez różnicy czy naturalnie czy nie)
+                y1: 0.1,  // jaka część ludzi zaszczepionych w każdym kroku przenoszona jest do odpornych (bez różnicy czy naturalnie czy nie)
                 b1: 0.005 ,  // jaka częsć ludzi zaszczepionych w kaðym kroku wciąż będzie zarażana ( powinno być w oczywsity sposób o rząd wielkości mniejsze od b)
                 u: 0.01    ,   // śmiertelność / dzietność w każdym kroku
                 b: 0.09,   // jaka część podatnych ludzi zostanie zarażona w każdym kroku

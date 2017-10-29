@@ -38,21 +38,21 @@ export default class InputParams extends Component {
                 <div className="row">
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="resistant">Procent odpornych</label>
+                            <label htmlFor="resistant">% odpornych</label>
                             <span className="range-label">{defaultValue.resistant}</span>
                             <input type="range" min="0" max="100" step="0.05" value={defaultValue.resistant} id="resistant" className="form-control" onChange={this.onUpdate.bind(this, 'resistant')}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="infectious">Procent zarażonych</label>
+                            <label htmlFor="infectious">% zarażonych</label>
                             <span className="range-label">{defaultValue.infectious}</span>
                             <input type="range" min="0" max="100" step="0.05" value={defaultValue.infectious} id="infectious" className="form-control" onChange={this.onUpdate.bind(this, 'infectious')}/>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="form-group">
-                            <label htmlFor="vaccinated">Procent w trakcie szczepienia</label>
+                            <label htmlFor="vaccinated">% w trakcie nabywania odporności</label>
                             <span className="range-label">{defaultValue.vaccinated}</span>
                             <input type="range" min="0" max="100" step="0.05" value={defaultValue.vaccinated} id="vaccinated" className="form-control" onChange={this.onUpdate.bind(this, 'vaccinated')}/>
                         </div>
