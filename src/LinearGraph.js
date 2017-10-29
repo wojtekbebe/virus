@@ -22,10 +22,10 @@ export default class LinearGraph extends Component {
                     data={this.props.graphData}
                 >
                     <Legend/>
-                    <Line type="monotone" dataKey="S" name="podatni" stroke="#00FF00"/>
-                    <Line type="monotone" dataKey="I" name="zakażeni" stroke="#FF0000"/>
-                    <Line type="monotone" dataKey="R" name="odporni" stroke="#0000FF"/>
-                    <Line type="monotone" dataKey="V" stroke="#222222"/>
+                    <Line type="monotone" dataKey="Sp" name="podatni" stroke="#00FF00"/>
+                    <Line type="monotone" dataKey="Ip" name="zakażeni" stroke="#FF0000"/>
+                    <Line type="monotone" dataKey="Rp" name="odporni" stroke="#0000FF"/>
+                    <Line type="monotone" dataKey="Vp" stroke="#222222"/>
                     <XAxis dataKey="t"/>
                     <YAxis/>
                 </LineChart>

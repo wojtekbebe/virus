@@ -29,7 +29,13 @@ export default class SVIRLinearEngine {
 
         const { a, y, y1, b, b1, u } = this;
 
-        result.push({t: 0, S, I, R, V});
+        result.push({
+            t: 0, S, I, R, V,
+            Sp: S*100,
+            Ip: I*100,
+            Rp: R*100,
+            Vp: V*100,
+        });
 
         for (var t = 1; t < this.daysCount; ++t) {
             deltaS = u - u*S - b*S*I - a*S;
@@ -42,7 +48,13 @@ export default class SVIRLinearEngine {
             I += deltaI;
             R += deltaR;
 
-            result.push({ t, S: S*100, I: I*100, R: R*100, V: V*100 });
+            result.push({
+                t, S, I, R, V,
+                Sp: S*100,
+                Ip: I*100,
+                Rp: R*100,
+                Vp: V*100,
+            });
         }
 
         return result;
