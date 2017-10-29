@@ -1,4 +1,4 @@
-// model oparty na SVIR
+// SVIR model implementation based on:
 // http://izt.ciens.ucv.ve/ecologia/Archivos/ECO_POB%202008/ECOPO6_2008/Liu%20y%20col_II%202008.pdf
 export default class SVIRLinearEngine {
     constructor(params) {
@@ -42,7 +42,7 @@ export default class SVIRLinearEngine {
             I += deltaI;
             R += deltaR;
 
-            result.push({ t, S, I, R, V });
+            result.push({ t, S: S*100, I: I*100, R: R*100, V: V*100 });
         }
 
         return result;
